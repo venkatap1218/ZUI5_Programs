@@ -1,0 +1,22 @@
+<mvc:View controllerName="com.formatterZUI5P9-Formatter.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<!-- Main Page with a dynamic title from i18n resource bundle -->
+			<Page title="{i18n>title}">
+				<content>
+					<!-- Vertical Box (VBox) to structure the content vertically -->
+					<VBox>
+						<!--AggregationBinding(List binding) to the 'cars' model -->
+						<List items="{/cars}">
+							<!-- Standard List Item for each car -->
+							<!-- Description with formatted engine CC and price -->
+							<StandardListItem title="{name}"
+								description="{ path: 'engineCC', formatter: '.determineCarType' } - { path: 'price', formatter: '.determineAffordability' }"/>
+						</List>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,83 @@
+<mvc:View controllerName="com.customZUI5P12-Custom.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:GridLayout="sap.ui.layout.form.GridLayout">
+	<!-- Main App Container -->
+	<App>
+		<pages>
+			<!-- Page with IconTabBar -->
+			<Page title="{i18n>Custom Controls}">
+				<content>
+					<!-- IconTabBar with event handler 'onIconTabPress' -->
+					<IconTabBar select="onIconTabPress">
+						<items>
+							<!-- IconTabFilter for Employee Table -->
+							<IconTabFilter text="ExampleRam" icon="sap-icon://notification" count="15" iconColor="Neutral">
+								<!-- Table to display employee data -->
+								<Table id="employeeTable" items="{/employees}">
+									<!-- Define columns for the Table -->
+									<columns>
+										<Column>
+											<Text text="Employee ID"/>
+										</Column>
+										<Column>
+											<Text text="Employee Name"/>
+										</Column>
+										<Column>
+											<Text text="Department"/>
+										</Column>
+									</columns>
+									<!-- Bind each row of the Table to the 'employees' model -->
+									<items>
+										<ColumnListItem>
+											<cells>
+												<!-- Display Employee ID using data binding to 'EmployeeID' property -->
+												<Text text="{EmployeeID}"/>
+												<!-- Display Employee Name using data binding to 'EmployeeName' property -->
+												<Text text="{EmployeeName}"/>
+												<!-- Display Department using data binding to 'Department' property -->
+												<Text text="{Department}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</IconTabFilter>
+							<!-- IconTabFilter for Login Form -->
+							<IconTabFilter text="Home" icon="sap-icon://home">
+								<!-- Vertical Box (VBox) for Login Form -->
+								<VBox fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+									<items>
+										<!-- Input field for User ID -->
+										<Input id="uid" placeholder="User ID"></Input>
+										<!-- Input field for Password with type 'Password' -->
+										<Input id="pasw" placeholder="Password" type="Password"></Input>
+										<!-- Button for Login with event handler 'onLoginTap' -->
+										<Button width="12rem" text="Login" type="Emphasized" press="onLoginTap"></Button>
+									</items>
+								</VBox>
+							</IconTabFilter>
+							<!-- IconTabFilter for Information with a SimpleForm -->
+							<IconTabFilter text="Information" icon="sap-icon://notes" iconColor="Positive" key="notes">
+								<!-- SimpleForm layout with editable fields -->
+								<f:SimpleForm layout="ResponsiveGridLayout" editable="true" labelSpanL="3" labelSpanM="3" labelSpanS="4" emptySpanL="0" emptySpanM="0">
+									<f:content>
+										<!-- Label and Text for Course-1 -->
+										<Label text="Course-1"/>
+										<Text text="SAP UI5"></Text>
+										<!-- Label and Text for Course-2 -->
+										<Label text="Course-2"/>
+										<Text text="SAP Fiori"></Text>
+										<!-- Label and Text for Course-3 -->
+										<Label text="Course-3"/>
+										<Text text="SAP Hana"></Text>
+										<!-- Label and Text for Course-4 -->
+										<Label text="Course-4"/>
+										<Text text="SAP BTP"></Text>
+									</f:content>
+								</f:SimpleForm>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

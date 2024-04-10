@@ -1,0 +1,38 @@
+#1. view/View1.view.xml  : Once click on :  onOpenFragment  then move to View1.controller.js  with reference of onOpenFragment
+<Button text="Open Fragment..Ram" press="onOpenFragment"/>
+
+#2. controller/View1.controller.js : 
+
+	onOpenFragment: function() {
+			// Open the fragment
+			this._oFragment.open();
+		}
+		
+#3. In controller/View1.controller.js    with reference -> this._oFragment.open(); means to open : goto  :Fragment/Intro.fragment.xml
+
+onInit: function() {
+			// Initialize the fragment
+			this._oFragment = sap.ui.xmlfragment("com.fragZUI5P8-Fragment.Fragment.Intro", this);
+		},
+		
+
+#4. Fragment/Intro.fragment.xml  press : onSayHello then move to 
+
+	<VBox>
+			<!-- Button with text "Say Hello" and press event "onSayHello" -->
+			<Button text="Say Hello" press="onSayHello"/>
+		</VBox>
+		
+#5. In controller/View1.controller.js 
+	onSayHello: function() {
+			MessageToast.show("This is the Ram Kumar!!!");
+		}
+		
+		Output is :  
+		
+		Open Fragment..Ram (click on button)
+             Hello Fragment   : click On :Say Hello
+
+                    This is the Ram Kumar
+
+

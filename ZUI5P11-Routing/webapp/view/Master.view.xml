@@ -1,0 +1,17 @@
+<mvc:View controllerName="com.routeZUI5P11-Routing.controller.Master" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Master Page">
+				<content>
+					<List headerText="">
+						<items>
+							<StandardListItem title="View1" press=".onView1" type="Navigation"/>
+							<StandardListItem title="View2" press=".onView2" type="Navigation"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

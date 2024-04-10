@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<!-- Dialog with title "Hello Fragment" -->
+	<!--	<Dialog title="Hello Fragment" stretch="true"> -->
+	<Dialog title="Hello Fragment">
+		<!-- Vertical Box (VBox) to contain content -->
+		<VBox>
+			<!-- Button with text "Say Hello" and press event "onSayHello" -->
+			<Button text="Say Hello..RAM" press="onSayHello"/>
+			<Button text="Close" press="onCloseFragment"/>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>

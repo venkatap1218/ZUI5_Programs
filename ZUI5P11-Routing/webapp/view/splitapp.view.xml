@@ -1,0 +1,6 @@
+<mvc:View controllerName="com.routeZUI5P11-Routing.controller.splitapp" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<SplitApp id="splitapp"></SplitApp>
+	</Shell>
+</mvc:View>

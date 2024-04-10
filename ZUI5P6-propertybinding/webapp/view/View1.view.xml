@@ -1,0 +1,19 @@
+<mvc:View controllerName="com.propbindingZUI5propertybindingp6.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<!-- Define a Page with a dynamic title using i18n resource bundle -->
+			<Page title="{i18n>title}">
+				<content>
+					<!-- Bind a List to a model with the name 'myModel' -->
+					<List items="{myModel>/}">
+						<items>
+							<!-- For each item in the model, create a StandardListItem -->
+							<StandardListItem title="{myModel>name}" description="{myModel>id}"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

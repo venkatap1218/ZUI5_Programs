@@ -1,0 +1,16 @@
+<mvc:View controllerName="com.navZUI5P10-Navigation.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<Page title="View1">
+				<content>
+					<!-- Use a VBox control to arrange content vertically -->
+					<VBox>
+						<!-- Create a Button with the text "Go to View 2" and attach the "onGoToDetailPress" event handler -->
+						<Button text="Go to View 2" press="onGoToDetailPress"/>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

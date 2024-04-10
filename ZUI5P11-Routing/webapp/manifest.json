@@ -1,0 +1,117 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "com.routeZUI5P11-Routing",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.routeZUI5P11-Routing.view.splitapp",
+			"type": "XML",
+			"async": true,
+			"id": "splitapp"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.routeZUI5P11-Routing.view",
+				"controlId": "splitapp",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "route",
+				"target": ["master", "view1"]
+			}, {
+				"pattern": "navView1",
+				"name": "route1",
+				"target": ["master", "view1"]
+			}, {
+				"pattern": "navView2",
+				"name": "route2",
+				"target": ["master", "view2"]
+			}],
+			"targets": {
+				"master": {
+					"viewType": "XML",
+					"viewName": "Master",
+					"controlAggregation": "masterPages"
+				},
+				"view1": {
+					"viewType": "XML",
+					"viewName": "View1",
+					"controlAggregation": "detailPages"
+				},
+				"view2": {
+					"viewType": "XML",
+					"viewName": "View2",
+					"controlAggregation": "detailPages"
+				}
+			}
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.routeZUI5P11-Routing.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}

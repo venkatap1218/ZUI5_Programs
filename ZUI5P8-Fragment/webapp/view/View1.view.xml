@@ -1,0 +1,20 @@
+<mvc:View controllerName="com.fragZUI5P8-Fragment.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<!-- Define the main App container -->
+	<App>
+		<!-- Specify the pages within the App -->
+		<pages>
+			<!-- Define a Page with a dynamic title from i18n resource -->
+			<Page title="{i18n>title}">
+				<!-- Define the content of the Page -->
+				<content>
+					<!-- Create a Vertical Box (VBox) to hold UI elements -->
+					<VBox>
+						<!-- Create a Button with the text "Open Fragment" and attach a press event handler "onOpenFragment" -->
+						<Button text="Open Fragment..Ram" press="onOpenFragment"/>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

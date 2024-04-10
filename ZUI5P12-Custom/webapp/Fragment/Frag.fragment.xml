@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<!-- Define a Dialog with specific properties -->
+	<Dialog id="yourDialog" title="Your Fragment Title" contentWidth="auto" contentHeight="auto" draggable="true" resizable="true"
+		showHeader="true">
+		<!-- Vertical Box (VBox) to arrange content vertically -->
+		<VBox>
+			<!-- Horizontal Box (HBox) for the Username input -->
+			<HBox>
+				<Label text="Username"/>
+				<!-- Label for the Username input -->
+				<Input id="usernameInput"/>
+				<!-- Input field for the Username -->
+			</HBox>
+			<!-- Horizontal Box (HBox) for the Password input -->
+			<HBox>
+				<Label text="Password"/>
+				<!-- Label for the Password input -->
+				<Input id="passwordInput" type="Password"/>
+				<!-- Password input field -->
+			</HBox>
+		</VBox>
+		<!-- Button to close the dialog -->
+		<Button text="Close" press="onCloseDialog"/>
+	</Dialog>
+</core:FragmentDefinition>

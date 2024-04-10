@@ -1,0 +1,18 @@
+<mvc:View controllerName="com.formZUI5registrationformp3.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Login Form">
+				<content>
+					<VBox fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">
+						<items>
+							<Input id="uid" placeholder="User ID"></Input>
+							<Input id="pasw" placeholder="Password" type="Password"></Input>
+							<Button width="12rem" text="Login" type="Emphasized" press="onLoginTap"></Button>
+						</items>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

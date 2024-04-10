@@ -1,0 +1,13 @@
+<mvc:View controllerName="com.navZUI5P10-Navigation.controller.View2" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<Page title="view2" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<!-- Create a Button with the text "Go to View 1" and attach the "onNavBack" event handler -->
+					<Button text="Go to View 1" press="onNavBack"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

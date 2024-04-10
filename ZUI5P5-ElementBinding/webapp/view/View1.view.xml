@@ -1,0 +1,56 @@
+<mvc:View controllerName="com.elebindingZUI5ElementBindingp5.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<!-- Define a Page with a dynamic title using i18n resource bundle -->
+			<Page title="{i18n>title}">
+				<content>
+					<!-- Use a VBox to vertically stack UI elements -->
+					<VBox>
+						<!-- Display a Label and Text for the 'firstName' property -->
+						<Label text="First Namdfgfgfe:"/>
+						<Text text="{/firstName}"/>
+						<!-- Display a Label and Text for the 'lastName' property -->
+						<Label text="Last Name:"/>
+						<Text text="{/lastName}"/>
+						<!-- Display a Label and Text for the 'age' property -->
+						<Label text="Age:"/>
+						<Text text="{/age}"/>
+						<!-- Display a Label and List for the 'hobbies' property -->
+						<Label text="Hobbies:"/>
+						<List items="{/hobbies}">
+							<!-- Display each hobby as a StandardListItem in the List -->
+							<StandardListItem title="{/hobbies}"/>
+						</List>
+						<!-- Display a Label and Table for the 'addresses' property -->
+						<Label text="Addresses:"/>
+						<Table items="{/addresses}">
+							<!-- Define columns for the Table -->
+							<columns>
+								<Column>
+									<Text text="Street"/>
+								</Column>
+								<Column>
+									<Text text="City"/>
+								</Column>
+								<Column>
+									<Text text="ZIP Code"/>
+								</Column>
+							</columns>
+							<!-- Display each address as a row in the Table -->
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{street}"/>
+										<Text text="{city}"/>
+										<Text text="{zip}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
